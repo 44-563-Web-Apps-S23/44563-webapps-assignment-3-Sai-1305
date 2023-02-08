@@ -80,5 +80,15 @@
                 <td>15</td>
             </tr>
         </table>
+        <hr>
+        <h2>Code display</h2>
+        <blockquote cite="https://stackoverflow.com/questions/4398951/force-ssl-https-using-htaccess-and-mod-rewrite">How can I force to SSL/https using .htaccess and mod_rewrite page specific in PHP?</blockquote>
+        <a href="https://stackoverflow.com/questions/4398951/force-ssl-https-using-htaccess-and-mod-rewrite">https://stackoverflow.com/questions/4398951/force-ssl-https-using-htaccess-and-mod-rewrite</a>
+        <pre>
+            RewriteEngine On
+            RewriteCond %{HTTPS} !=on
+            RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+        </pre>
+        <a href="https://css-tricks.com/snippets/htaccess/force-https/">Source</a>.
     </body>
 </html>
